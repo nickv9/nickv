@@ -63,6 +63,13 @@ head(mtcars[theSubsetRows,])
 #             array instead of row numbers as in the prior example
 head(mtcars[!is.na(mtcars[,"cyl"]),])
 
+# subset all rows with select  columns
+# dataframe[, c("column1", "column2")]
+mtcars[, c("mpg", "carb")]
+
+# subset all rows where attribute matches
+# dataframe[dataframe$attribute =="value", ] 
+mtcars[mtcars$cyl==4,]
 
 ```
 
