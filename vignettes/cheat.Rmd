@@ -238,3 +238,15 @@ Put this into the GitHub search box to see how packages on CRAN use the llply() 
 ```
  "llply" user:cran language:R
 ```
+
+###Conditional mutate
+NOTE: should probably also look at recode here
+```{r}
+nycflights13::airlines %>%
+    dplyr::mutate(
+        name = dplyr::case_when(
+            name == "Virgin America" ~ "Alaska Airlines Inc.",
+            TRUE ~ name)
+    )
+```
+
