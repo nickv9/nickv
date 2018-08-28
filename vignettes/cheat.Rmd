@@ -250,3 +250,16 @@ nycflights13::airlines %>%
     )
 ```
 
+###extracting nested list into a tibble
+SOURCE: https://cfss.uchicago.edu/webdata004_simplifying_lists.html 
+```{r}
+my_list <- list(
+    list(first = "nick", last = "vasile", weight = 170),
+    list(first = "bob", last = "smith", weight = 150)
+)
+
+my_list
+
+purrr::map_df(my_list, magrittr::extract)
+```
+
