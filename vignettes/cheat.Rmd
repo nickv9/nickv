@@ -161,6 +161,11 @@ stringr::sentences %>%
 ggplot2::diamonds %>%
   dplyr::select_at(dplyr::vars(dplyr::contains('c')))
 
+#filter where attribute value starts with a string
+mtcars %>% 
+    tibble::rownames_to_column("model") %>% 
+    dplyr::filter(stringr::str_detect(model, "^Merc"))
+
 #rename columns/attributes if they contain certain pattern
 #in this case replace '.' with '_'
 #SOU
