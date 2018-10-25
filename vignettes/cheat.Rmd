@@ -212,6 +212,14 @@ Sys.timezone()
 OlsonNames() %>% head()
 ```
 
+###Calculate minutes between two times
+
+```{r}
+library(lubridate)
+ymd_hms("2018-10-25 12:00:00") %--% ymd_hms("2018-10-25 13:00:00") / dminutes(1)
+```
+
+
 ###View data exported by a package
 ```{r, eval = FALSE}
 data(package = "ggplot2")
