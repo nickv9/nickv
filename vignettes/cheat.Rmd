@@ -88,7 +88,6 @@ pastecs::stat.desc(mtcars)
 sum(is.na(mtcars$cyl))
 ```
 
-
 ###Prevent garbage characters when using read.csv on data exported from SQL
 ```{r, eval = FALSE}
 #SOURCE: http://stackoverflow.com/questions/24568056/rs-read-csv-prepending-1st-column-name-with-junk-text
@@ -274,5 +273,15 @@ my_list <- list(
 my_list
 
 purrr::map_df(my_list, magrittr::extract)
+```
+
+###Scatterplot of all pairs
+```{r}
+pairs(mtcars)
+```
+
+###Interactively explore plots
+```{r,eval=FALSE}
+identify(mtcars$hp, mtcars$mpg, mtcars$mpg)
 ```
 
