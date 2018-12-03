@@ -285,3 +285,9 @@ pairs(mtcars)
 identify(mtcars$hp, mtcars$mpg, mtcars$mpg)
 ```
 
+##Sort bar plot by counts
+```{r}
+nycflights13::flights %>% 
+    ggplot2::ggplot(ggplot2::aes(x=forcats::fct_infreq(carrier))) +
+    ggplot2::geom_bar()
+```
