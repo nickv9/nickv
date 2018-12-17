@@ -291,3 +291,10 @@ nycflights13::flights %>%
     ggplot2::ggplot(ggplot2::aes(x=forcats::fct_infreq(carrier))) +
     ggplot2::geom_bar()
 ```
+
+###Color coded correlation table
+```{r}
+M <- cor(mtcars)
+corrplot::corrplot(M, method="color")
+```
+
