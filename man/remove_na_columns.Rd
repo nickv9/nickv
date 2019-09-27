@@ -10,7 +10,7 @@ remove_na_columns(df)
 \item{df}{}
 }
 \value{
-a data frame that only includes columns where at least one row has a value
+a data frame that only includes columns with at least one value
 }
 \description{
 Remove NA columns
